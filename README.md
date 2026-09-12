@@ -15,42 +15,54 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    ```bash
    npx expo start
    ```
+   
+# 📚 BookStore Online App - Layout với Flexbox (React Native & Expo)
 
-In the output, you'll find options to open the app in a
+Ứng dụng mẫu **BookStore Online** được xây dựng bằng React Native và Expo Router, tập trung vào việc thiết kế giao diện (UI) và làm chủ các kỹ thuật sắp xếp layout với **Flexbox** (không sử dụng thư viện UI bên ngoài).
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🎯 Mục tiêu dự án
 
-## Get a fresh project
+* **Thành thạo Flexbox trong React Native**: Sử dụng thành thạo `flexDirection`, `justifyContent`, `alignItems`, `alignSelf`, `flexWrap`, `gap`[cite: 1].
+* **Xây dựng layout thực tế**: Dựng các thành phần UI như Header cố định, danh sách danh mục dạng Chip, lưới sản phẩm 2 cột (Book Grid), Badge giảm giá/nhãn Mới, và Nút giỏ hàng nổi (Floating Button)[cite: 1].
+* **Kỹ thuật Position & Containing Block**: Áp dụng `position: 'relative'` và `position: 'absolute'` lồng nhau để làm badge và floating action button[cite: 1].
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## 🚀 Tính năng & Thành phần UI
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+* **Header**: Thanh điều hướng cố định phía trên màn hình (`flexDirection: 'row'`, `justifyContent: 'space-between'`)[cite: 1].
+* **Category Chips**: Danh sách phân loại sách tự động xuống dòng khi tràn màn hình (`flexWrap: 'wrap'`, `gap: 8`)[cite: 1].
+* **Book Grid**: Lưới hiển thị sách 2 cột sử dụng phần trăm chiều rộng (`width: '48%'`) và giữ tỉ lệ ảnh với `aspectRatio: 3/4`[cite: 1].
+* **Discount Badge**: Nhãn giảm giá (`-20%`) hoặc nhãn `Mới` định vị tuyệt đối đè lên góc ảnh bìa sách[cite: 1].
+* **Floating Cart Button**: Nút giỏ hàng hình tròn cố định ở góc dưới phải màn hình kèm badge hiển thị số lượng[cite: 1].
 
-### Other setup steps
+---
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## 🛠 Công nghệ sử dụng
 
-## Learn more
+* **Framework**: React Native, Expo (Expo Router)
+* **Language**: TypeScript
+* **Styling**: `StyleSheet` (Flexbox thuần)
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📂 Cấu trúc thư mục
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```text
+Day3_Mobile/
+├── app/
+│   └── index.tsx             # Entry point chính của ứng dụng (Trang chủ)
+├── assets/                   # Hình ảnh & tài nguyên tĩnh
+├── components/               # Các component giao diện reusable
+│   ├── BookGrid.tsx          # Lưới sản phẩm 2 cột & Badge[cite: 1]
+│   ├── BookRowCard.tsx       # Card sách dạng hàng ngang[cite: 1]
+│   ├── CategoryChips.tsx     # Thẻ danh mục dạng pill[cite: 1]
+│   ├── DiscountBadge.tsx     # Nhãn giảm giá / Mới[cite: 1]
+│   ├── FloatingCartButton.tsx# Nút giỏ hàng nổi[cite: 1]
+│   └── Header.tsx            # Thanh header ứng dụng[cite: 1]
+├── App.tsx                   # Main App Component
+├── data.ts                   # Dữ liệu mẫu (Books, Categories)[cite: 1]
+├── package.json
+└── README.md
