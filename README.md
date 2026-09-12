@@ -23,18 +23,18 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 ## 🎯 Mục tiêu dự án
 
-* **Thành thạo Flexbox trong React Native**: Sử dụng thành thạo `flexDirection`, `justifyContent`, `alignItems`, `alignSelf`, `flexWrap`, `gap`[cite: 1].
-* **Xây dựng layout thực tế**: Dựng các thành phần UI như Header cố định, danh sách danh mục dạng Chip, lưới sản phẩm 2 cột (Book Grid), Badge giảm giá/nhãn Mới, và Nút giỏ hàng nổi (Floating Button)[cite: 1].
-* **Kỹ thuật Position & Containing Block**: Áp dụng `position: 'relative'` và `position: 'absolute'` lồng nhau để làm badge và floating action button[cite: 1].
+* **Thành thạo Flexbox trong React Native**: Sử dụng thành thạo `flexDirection`, `justifyContent`, `alignItems`, `alignSelf`, `flexWrap`, `gap`.
+* **Xây dựng layout thực tế**: Dựng các thành phần UI như Header cố định, danh sách danh mục dạng Chip, lưới sản phẩm 2 cột (Book Grid), Badge giảm giá/nhãn Mới, và Nút giỏ hàng nổi (Floating Button).
+* **Kỹ thuật Position & Containing Block**: Áp dụng `position: 'relative'` và `position: 'absolute'` lồng nhau để làm badge và floating action button.
 
 
 ## 🚀 Tính năng & Thành phần UI
 
-* **Header**: Thanh điều hướng cố định phía trên màn hình (`flexDirection: 'row'`, `justifyContent: 'space-between'`)[cite: 1].
-* **Category Chips**: Danh sách phân loại sách tự động xuống dòng khi tràn màn hình (`flexWrap: 'wrap'`, `gap: 8`)[cite: 1].
-* **Book Grid**: Lưới hiển thị sách 2 cột sử dụng phần trăm chiều rộng (`width: '48%'`) và giữ tỉ lệ ảnh với `aspectRatio: 3/4`[cite: 1].
-* **Discount Badge**: Nhãn giảm giá (`-20%`) hoặc nhãn `Mới` định vị tuyệt đối đè lên góc ảnh bìa sách[cite: 1].
-* **Floating Cart Button**: Nút giỏ hàng hình tròn cố định ở góc dưới phải màn hình kèm badge hiển thị số lượng[cite: 1].
+* **Header**: Thanh điều hướng cố định phía trên màn hình (`flexDirection: 'row'`, `justifyContent: 'space-between'`).
+* **Category Chips**: Danh sách phân loại sách tự động xuống dòng khi tràn màn hình (`flexWrap: 'wrap'`, `gap: 8`).
+* **Book Grid**: Lưới hiển thị sách 2 cột sử dụng phần trăm chiều rộng (`width: '48%'`) và giữ tỉ lệ ảnh với `aspectRatio: 3/4`.
+* **Discount Badge**: Nhãn giảm giá (`-20%`) hoặc nhãn `Mới` định vị tuyệt đối đè lên góc ảnh bìa sách.
+* **Floating Cart Button**: Nút giỏ hàng hình tròn cố định ở góc dưới phải màn hình kèm badge hiển thị số lượng.
 
 
 ## 🛠 Công nghệ sử dụng
